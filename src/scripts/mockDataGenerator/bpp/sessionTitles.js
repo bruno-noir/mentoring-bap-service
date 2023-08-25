@@ -203,6 +203,42 @@ const titles = [
 	'The Science of Climate Change',
 ]
 
+const subjects = [
+    "Accountancy", "Accountancy and Auditing", "Accountancy Volume 1", "Accountancy Volume 2", "Agriculture Science",
+    "Agriculture", "Assamese", "Ayush", "Basic Electronics Engineering", "Bengali", "Bio Chemistry", "Biology",
+    "Botany", "Bsg", "Buisness Studies", "Chemistry", "Civis", "Computer", "Computer Science", "Cpse",
+    "Creative Writing And Translations", "Defence Studies", "Economics", "English", "English Reader", "Environmental Science",
+    "Environmental Studies", "Environmental Study", "Evs", "Evs Part 1", "Fine Arts", "French", "General Science",
+    "Geography", "Graaphic Design", "Griha Shilpa", "Gujarati", "Health and Physical Science", "Heritage Crafts", "Hindi",
+    "History", "History and Civics", "Home Science", "Information Practices", "Ircs", "Kannada", "Koborok", "Konkani",
+    "Malayalam", "Marathi", "Mathematics", "Maths", "Meitei(Manipur)", "Mizo", "Mohfw", "Moral Education", "Moya", "Ncc",
+    "Nepali", "Nss", "Nyks", "Odia", "Others", "Physical Science", "Physics", "Political Science", "Psycology", "Punjabi",
+    "Sanskrit", "Science", "Sindhi", "Skills", "Sociology", "Statistics", "Tamil", "Telgu", "Tourism and Travel Management",
+    "Training", "Urdu", "Urdu Zuban", "Zoology"
+];
+
+const languageOptions = [
+    "Awadhi", "Bhojpuri", "Brij Bhasha", "English", "Hindi", "Marathi", "Sanskrit", "Tamil", "Telgu", "Urdu", "Other"
+];
+
+// Generate 200 more elements similar to the existing format
+for (let i = 0; i < 200; i++) {
+    const grade = Math.floor(Math.random() * 12) + 1; // Random grade between 1 and 12
+    const subjectIndex = Math.floor(Math.random() * subjects.length);
+    const subject = subjects[subjectIndex];
+
+    const languageIndex = Math.floor(Math.random() * languageOptions.length);
+    const language = languageOptions[languageIndex];
+
+    // You can choose the format you prefer here
+    // For example: "Science of Class 9 in English" or "Class 9-Science-English"
+    const newTitle = `Science of Class ${grade} in ${language}`;
+    // const newTitle = `Class ${grade}-${subject}-${language}`;
+
+    titles.push(newTitle);
+}
+
+
 console.log(titles.length)
 
 const shuffleArray = (array) => {
